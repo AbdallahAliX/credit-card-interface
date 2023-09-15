@@ -1,0 +1,180 @@
+body{
+  font-size: 18px;
+  font-family: Space Grotesk;
+  margin: 0;
+  padding: 0;
+}
+
+.section{
+  display: flex;
+  flex-direction: row;
+}
+
+.bg-main-desktop{
+  height: 923px;
+}
+
+.background-section{
+  position: relative;
+  width: 495px;
+  height: 923px;
+}
+
+.card-front{
+  position: absolute;
+  top: 180px;
+  right: -100px;
+}
+.card-back{
+  position: absolute;
+  top: 460px;
+  right: -170px;
+}
+
+.card-logo{
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.js-cardNumber{
+  position: absolute;
+  left: 9%;
+  bottom: 35px;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+
+.js-holderName{
+  position: absolute;
+  bottom: 14px;
+  left: 9%;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.js-holderBirthDate{
+  position: absolute;
+  bottom: 14px;
+  right: 5%;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.js-securityBin{
+  position: absolute;
+  top: 40%;
+  right: 12%;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.information-section{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-title{
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 7px;
+  color: (279, 6%, 55%);
+}
+
+.all-input{
+  height: max-content;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: rgb(199, 197, 197);
+  border-style: solid;
+  margin-bottom: 10px;
+  font-family: Space Grotesk;
+  transition: border-color 0.3s;
+}
+
+.all-input:focus{
+  outline: none;
+  font-family: Space Grotesk;
+  border-color: blueviolet;
+}
+
+
+.js-nameInput,.js-cardNumberInput{
+  padding: 10px;
+  width: 335px;
+ 
+}
+
+.js-nameInput:focus,.js-cardNumberInput:focus{
+  outline: none;
+  font-family: Space Grotesk;
+  border-color: blueviolet;
+}
+
+.all-input::placeholder{
+  color: rgb(199, 197, 197);
+  font-family: Space Grotesk;
+  letter-spacing: 1px;
+}
+
+.js-monthInput,.js-yearInput{
+  padding: 10px;
+  width: 50px;
+
+}
+
+
+.cvc-expDate-grid{
+  display: grid;
+  grid-template-columns: 177px 177px;
+}
+
+.js-cvcInput{
+  padding: 10px;
+  width: 160px;
+
+}
+
+.js-confirm-button{
+  width: 360px;
+  margin-top: 30px;
+  padding: 15px 0px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  font-family: Space Grotesk;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.js-nameErrorMessage,.js-numberErrorMessage{
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.js-monthErrorMessage,.js-yearErrorMessage{
+  font-size: 10px;
+  width: 50px;
+  margin-top: -5px;
+  color: red;
+  display: inline-block;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

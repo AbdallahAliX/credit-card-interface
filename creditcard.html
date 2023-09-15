@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Credit Card</title>
+  <link rel="stylesheet" href="creditcard.css">
+  <script src="creditcard.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="section">
+    <div class="background-section">
+      <img class="bg-main-desktop" src="interactive-card-details-form-main/images/bg-main-desktop.png">
+      <div class="card-front">
+        <img src="interactive-card-details-form-main/images/bg-card-front.png">
+        <img class="card-logo" src="interactive-card-details-form-main/images/card-logo.svg">
+        <p class="js-cardNumber">0000 0000 0000 0000</p>
+        <p class="js-holderName">JANE APPLESEED</p>
+        <p class="js-holderBirthDate">00/00</p>
+      </div>
+      <div class="card-back">
+        <img src="interactive-card-details-form-main/images/bg-card-back.png">
+        <p class="js-securityBin">000</p>
+      </div>
+    </div>
+    <div class="information-section">
+      <div>
+        <p class="input-title">CARDHOLDER NAME</p>
+        <input class="js-nameInput all-input" placeholder="e.g. Jane Appleseed">
+        <p class="js-nameErrorMessage"></p>
+        <p class="input-title">CARD NUMBER</p>
+        <input type="number" class="js-cardNumberInput all-input" placeholder="e.g. 1234 5678 9123 0000">
+        <p class="js-numberErrorMessage"></p>
+        <div class="cvc-expDate-grid">
+          <div>
+            <p  class="input-title">EXP.DATE ( MM/YY )</p>
+            <input type="number" class="js-monthInput all-input" placeholder="MM">
+            <input type="number" class="js-yearInput all-input" placeholder="YY">
+          </div>
+          <div>
+            <p class="input-title">CVC</p>
+            <input type="number" class="js-cvcInput all-input" placeholder="e.g. 123">
+            <p class="js-numberErrorMessage"></p>
+          </div>
+        </div>
+        <button class="js-confirm-button" onclick="
+          confirmingFields();
+        ">
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
