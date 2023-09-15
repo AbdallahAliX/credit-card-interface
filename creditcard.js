@@ -1,49 +1,4 @@
 
-// const cardHolderName = document.querySelector('.js-nameInput');
-// const holderNameChange = document.querySelector('.js-holderName');
-
-// cardHolderName.addEventListener('input', function(){
-
-//   const inputValue = cardHolderName.value.toUpperCase();
-//   holderNameChange.textContent = inputValue;
-// })
-
-// const cardNumber = document.querySelector('.js-cardNumberInput');
-// const cardNumberChange = document.querySelector('.js-cardNumber');
-
-// cardNumber.addEventListener('input', function(){
-
-//   const inputValue = cardNumber.value;
-//   cardNumberChange.textContent = inputValue;
-// })
-
-// const expMonth = document.querySelector('.js-monthInput');
-// const expYear = document.querySelector('.js-yearInput');
-// const expDateChange = document.querySelector('.js-holderBirthDate');
-
-
-// expMonth.addEventListener('input', function() {
-//   const monthValue = expMonth.value;
-//   const yearValue = expYear.value;
-//   expDateChange.textContent = `${monthValue}/${yearValue}`;
-// });
-
-// expYear.addEventListener('input', function() {
-//   const monthValue = expMonth.value;
-//   const yearValue = expYear.value;
-//   expDateChange.textContent = `${monthValue}/${yearValue}`;
-// });
-
-
-// const cvc = document.querySelector('.js-cvcInput');
-// const cvcChange = document.querySelector('.js-securityBin');
-
-// cvc.addEventListener('input', function(){
-
-//   const inputValue = cvc.value;
-//   cvcChange.textContent = inputValue;
-// })
-
 
 function handleInputChange(inputElement, outputElement, transform = (val) => val) {
   inputElement.addEventListener('input', function () {
