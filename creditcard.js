@@ -31,49 +31,65 @@ const cvc = document.querySelector('.js-cvcInput');
 const cvcChange = document.querySelector('.js-securityBin');
 handleInputChange(cvc, cvcChange);
 
+
+
 function confirmingFields() {
- const name = cardHolderName.value.trim();
- const nameErrorMessage = document.querySelector('.js-nameErrorMessage');
- const alphabetPattern = /^[A-Za-z]+$/;
- if (!alphabetPattern.test(name)) {
-  nameErrorMessage.innerHTML='Wrong Format, characters only';
- }
- else{ 
-  nameErrorMessage.innerHTML='';
-  // inputConfirmed();
- }
+  const name = cardHolderName.value;
+  const nameTrimmed = name.trim();
+  const nameErrorMessage = document.querySelector('.js-nameErrorMessage');
+  const alphabetPattern = /^[A-Za-z]+$/;
+  if (!alphabetPattern.test(nameTrimmed)) {
+    nameErrorMessage.innerHTML = 'Wrong Format, characters only';
+
+  }
+  else {
+    nameErrorMessage.innerHTML = '';
+  }
+
 }
 
 
-function countingCharacters(element,desiredNumber,errorMessage) {
+function countingCharacters(element, desiredNumber, errorMessage) {
   const inputText = element.value.trim();
   const characterCount = inputText.length;
   let error = document.querySelector(errorMessage);
 
   if (characterCount === desiredNumber) {
-    inputConfirmed();
     error.innerHTML = '';
   }
-  else{
+  else {
     error.innerHTML = 'Invalid number of characters';
+
   }
+
 }
 
-function confirmingDate(element,desiredNumber,errorMessage,n) {
+function confirmingDate(element, desiredNumber, errorMessage, n) {
   const inputText = element.value.trim();
   const characterCount = inputText.length;
   let error = document.querySelector(errorMessage);
 
-  if (characterCount !== desiredNumber || inputText > n ) {
-    inputConfirmed();
-    error.innerHTML = '';
+  if (characterCount !== desiredNumber || inputText > n) {
     error.innerHTML = 'Invalid';
   }
-  else  {
+  else {
     error.innerHTML = '';
   }
+
 }
 
-function inputConfirmed() {
-  
-}
+// function inputConfirmed() {
+//   const sectionHTML = document.querySelector('.information-section');
+//   const newSection =  `
+//   <img class="complete-icon" src="interactive-card-details-form-main/images/icon-complete.svg">
+//   <p class="complete-thanks">THANK YOU!</p>
+//   <p class="complete-text">We've added your card details</p>
+//   <button class="continue-button">Continue</button>
+//   `
+
+//   sectionHTML.innerHTML = newSection;
+
+//   if (confirm === true) {
+//     inputConfirmed();
+//   }
+// }
