@@ -42,15 +42,21 @@
             <p  class="input-title">EXP.DATE ( MM/YY )</p>
             <input type="number" class="js-monthInput all-input" placeholder="MM">
             <input type="number" class="js-yearInput all-input" placeholder="YY">
+            <p class="js-expMonthMessage"></p>
+            <p class="js-expYearMessage"></p>
           </div>
           <div>
             <p class="input-title">CVC</p>
             <input type="number" class="js-cvcInput all-input" placeholder="e.g. 123">
-            <p class="js-numberErrorMessage"></p>
+            <p class="js-cvcErrorMessage"></p>
           </div>
         </div>
         <button class="js-confirm-button" onclick="
           confirmingFields();
+          countingCharacters(cardNumber,16,'.js-numberErrorMessage');
+          confirmingDate(expMonth,2,'.js-expMonthMessage',12);
+          confirmingDate(expYear,2,'.js-expYearMessage');
+          countingCharacters(cvc,3,'.js-cvcErrorMessage');
         ">
           Confirm
         </button>

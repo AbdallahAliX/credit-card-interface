@@ -178,3 +178,20 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+.js-cvcErrorMessage{
+  font-size: 12px;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+
+.js-expMonthMessage,.js-expYearMessage{
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: red;
+  margin-right: 40px;
+  display: inline;
+}
+

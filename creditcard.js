@@ -40,5 +40,40 @@ function confirmingFields() {
  }
  else{ 
   nameErrorMessage.innerHTML='';
+  // inputConfirmed();
  }
+}
+
+
+function countingCharacters(element,desiredNumber,errorMessage) {
+  const inputText = element.value.trim();
+  const characterCount = inputText.length;
+  let error = document.querySelector(errorMessage);
+
+  if (characterCount === desiredNumber) {
+    inputConfirmed();
+    error.innerHTML = '';
+  }
+  else{
+    error.innerHTML = 'Invalid number of characters';
+  }
+}
+
+function confirmingDate(element,desiredNumber,errorMessage,n) {
+  const inputText = element.value.trim();
+  const characterCount = inputText.length;
+  let error = document.querySelector(errorMessage);
+
+  if (characterCount !== desiredNumber || inputText > n ) {
+    inputConfirmed();
+    error.innerHTML = '';
+    error.innerHTML = 'Invalid';
+  }
+  else  {
+    error.innerHTML = '';
+  }
+}
+
+function inputConfirmed() {
+  
 }
